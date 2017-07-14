@@ -10,6 +10,12 @@ http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html
 IAM AWS Console: users:
 https://console.aws.amazon.com/iam/home?region=us-east-1#/users
 
+Required permissions for the user in IAM
+```
+AmazonLexReadOnly
+AmazonLexRunBotsOnly
+```
+
 Lex AWS Console:
 https://console.aws.amazon.com/lex/home?region=us-east-1#
 
