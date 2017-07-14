@@ -10,6 +10,12 @@ http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html
 IAM AWS Console: users:
 https://console.aws.amazon.com/iam/home?region=us-east-1#/users
 
+Required permissions for the user in IAM
+```
+AmazonLexReadOnly
+AmazonLexRunBotsOnly
+```
+
 Lex AWS Console:
 https://console.aws.amazon.com/lex/home?region=us-east-1#
 
@@ -28,8 +34,10 @@ http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
 Signing AWS Requests with Signature Version 4:
 http://docs.aws.amazon.com/general/latest/gr/sigv4_signing.html#sigv4_signing-steps-overview
 
-Examples of the Complete Version 4 Signing Process (Python):
+Examples of the Complete Version 4 Signing Process of accessing DynamoDb (Python):
 http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
+Example of the Complete Version 4 Signing Process of accessing Lex (Python):
+https://github.com/satr/amazon-lex-access-with-rest-api-from-java-app/blob/master/docs/amazon-lex-access-with-rest-api.py
 
 Examples of How to Derive a Signing Key for Signature Version 4:
 http://docs.aws.amazon.com/general/latest/gr/signature-v4-examples.html
