@@ -41,8 +41,8 @@ public class Main {
             // Check out "Best Practices for Managing AWS Access Keys":
             // http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html
 
-            final String botName = "TestBotForRequest";
-            final String botAlias = "testbotforrequest";
+            final String botName = "TestBot";
+            final String botAlias = "testbot";
             final String userId = "myUserId";//some user id, which will be sent in a Lex request field "userId"
             final String postAction = "text";
             // for stream request (text or audio stream)
@@ -103,6 +103,8 @@ public class Main {
 
                 Response response = client.post(requestParameters);
                 InputStream responseStream = (InputStream) response.getEntity();
+//                System.out.println(String.format("%s;\t x-amzn-RequestId: %s", Instant.now().atZone(ZoneOffset.UTC),
+//                                                    response.getMetadata().get("x-amzn-RequestId")));
                 if(response.getStatus() == 200) {
                     JsonNode jsonNode = new ObjectMapper().readTree(responseStream);
                     String dialogState = jsonNode.get("dialogState").asText("");
